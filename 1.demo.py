@@ -1,7 +1,9 @@
 import cv2 as cv
 
-img = cv.imread("sad.jpg", 1)  # 读取图片
-cv.imshow('input image', img)  # 显示图片
+img = cv.imread("D:/master/opencv-python/sad.jpg", 1)  
+# 读取图片
+cv.imshow('input image', img)  
+# 显示图片
 pixel = img[100, 100]
 shape = img.shape
 size = img.size
@@ -20,6 +22,9 @@ constant = cv.copyMakeBorder(roi, 5, 5, 5, 5, cv.BORDER_CONSTANT, value=[0, 255,
 # 添加绿色边框
 cv.imwrite("test.jpg", constant)  # 保存图片
 cv.imshow("test.jpg", constant)
+# if cv.waitKey(5000):
+#     cv.destroyAllWindows()
+#     # 等待5s自动销毁所有窗口
 cv.waitKey()
-
-cv.destoryAllWindows()
+cv.destroyAllWindows()
+# 任意键销毁
