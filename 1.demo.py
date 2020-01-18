@@ -17,7 +17,7 @@ data = {
 for key in data:
     print(str(key) + ':' + str(data[key]))
     print('*' * 25)
-roi = img[100:515, 100:696]  # 高，宽
+roi = img[100:, 100:]  # 高（行），宽（列）
 constant = cv.copyMakeBorder(roi, 5, 5, 5, 5, cv.BORDER_CONSTANT, value=[0, 255, 0]) 
 # 添加绿色边框
 cv.imwrite("test.jpg", constant)  # 保存图片
